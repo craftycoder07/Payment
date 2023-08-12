@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Payment.Provider.Stripe
+﻿namespace Payment.Provider.Stripe
 {
-    public class StripeOptions
+    /// <summary>
+    /// Represents options related to Stripe configuration.
+    /// </summary>
+    internal class StripeOptions
     {
-        public string BaseURL { get; set; }
+        /// <summary>
+        /// Gets or sets the base URL for Stripe configuration.
+        /// </summary>
+        public required string BaseURL { get; set; }
     }
+
 }

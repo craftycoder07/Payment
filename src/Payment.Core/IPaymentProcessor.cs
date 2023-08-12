@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Payment.Core
+﻿namespace Payment.Core
 {
+    /// <summary>
+    /// Represents a type used to payment transation
+    /// </summary>
     public interface IPaymentProcessor
     {
+        /// <summary>
+        /// Charges Credit Card.
+        /// </summary>
         public void Charge();
     }
 }

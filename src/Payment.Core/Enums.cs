@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Payment.Core
+﻿namespace Payment.Core
 {
+    /// <summary>
+    /// Supported payment processing providers.
+    /// </summary>
     public enum PaymentProcessingProvider : byte
     {
+        /// <summary>
+        /// Represents the Stripe payment processing provider.
+        /// </summary>
         Stripe = 1
     }
 }
