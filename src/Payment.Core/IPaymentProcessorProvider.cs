@@ -13,7 +13,6 @@ public interface IPaymentProcessorProvider
     /// <summary>
     /// Creates an instance of a payment processor using the provided service provider.
     /// </summary>
-    /// <param name="serviceProvider">The service provider to use for creating the payment processor.</param>
     /// <returns>An instance of <see cref="IPaymentProcessor"/> representing the created payment processor.</returns>
-    IPaymentProcessor CreatePaymentProcessor(IServiceProvider serviceProvider);
+    IPaymentProcessor CreatePaymentProcessor();
 }

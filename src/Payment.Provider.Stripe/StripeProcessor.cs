@@ -21,10 +21,10 @@ namespace Payment.Provider.Stripe
         /// <summary>
         /// Charges the payment using the configured Stripe options.
         /// </summary>
-        public void Charge()
+        /// <returns>An instance of <see cref="string"/> representing transaction identifier.</returns>
+        public string Charge()
         {
-            // Outputs the base URL from the Stripe options.
-            Console.WriteLine(_stripeOptions.BaseURL);
+            return "test";
         }
     }
 

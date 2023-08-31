@@ -8,6 +8,7 @@
         /// <summary>
         /// Charges Credit Card.
         /// </summary>
-        public void Charge();
+        /// <returns>An instance of <see cref="string"/> representing transaction identifier.</returns>
+        public string Charge();
     }
 }

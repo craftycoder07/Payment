@@ -6,16 +6,13 @@
     public sealed class PaymentProcessorFactory : IPaymentProcessorFactory
     {
         private readonly IEnumerable<IPaymentProcessorProvider> _paymentProcessorProviders;
-        private readonly IServiceProvider _serviceProvider;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PaymentProcessorFactory"/> class.
         /// </summary>
-        /// <param name="serviceProvider">The service provider used for dependency injection.</param>
         /// <param name="paymentProcessorProviders">A collection of payment processor providers.</param>
-        public PaymentProcessorFactory(IServiceProvider serviceProvider, IEnumerable<IPaymentProcessorProvider> paymentProcessorProviders)
+        public PaymentProcessorFactory(IEnumerable<IPaymentProcessorProvider> paymentProcessorProviders)
         {
-            _serviceProvider = serviceProvider;
             _paymentProcessorProviders = paymentProcessorProviders;
         }
 
@@ -27,7 +24,7 @@
         public IPaymentProcessor Create(PaymentProcessingProvider paymentProcessingProvider)
         {
             return _paymentProcessorProviders.First(x => x.PaymentProcessingProvider == paymentProcessingProvider)
-                                              .CreatePaymentProcessor(_serviceProvider);
+                                              .CreatePaymentProcessor();
         }
     }
 }
